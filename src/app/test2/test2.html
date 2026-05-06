@@ -2,7 +2,10 @@
     <h2>Componente Test2</h2>
     <p>INPUT STATUS: {{statusTest}}</p>
 
-    <p>{{myVar}}</p>
+    <p>Mi variable: {{myVar}}</p>
 
     <button (click)="onShowData()">Mostrar</button>
+
+    <br> <br>
+    <input type="text" [(ngModel)] = "myVar">
 </div>

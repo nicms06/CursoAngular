@@ -2,4 +2,40 @@
 
 <app-test2 name="Nicolás" lastName="Mingorance" (onSendData)="printData($event)"></app-test2>
 
-<input type="checkbox">
+<app-contador [etiqueta]="'Sumar 1 al contador'" (pulsado)="sumarContador()" [etiqueta2]=" 'Reiniciar' " (borrado)="borrarContador()"></app-contador>
+<p>Contador : {{contador}} </p>
+
+<button (click)="sw = !sw">Mostrar Test 3  </button>
+@if (sw){
+    <app-test3 name = "hola"></app-test3>
+}
+
+<h4>Uso del ngFor</h4>
+<ul>
+    @for (item of usuarios; track item){
+        <li>{{item}}</li>
+    }
+</ul>
+
+<input type="number" [(ngModel)] = "number">
+
+@switch (number) {
+    @case (0) {
+        <p>Rojo</p>
+    }
+    @case (1) {
+        <p>Azul</p>
+    }
+    @case (2) {
+        <p>Verde</p>
+    }
+    @default {
+        <p>Número no válido.</p>
+    }
+}
+
+<app-test3>
+    <h3>Prueba ng-content</h3>
+    <p>Mi propio contenido</p>
+    <button>Mi botón</button>
+</app-test3>

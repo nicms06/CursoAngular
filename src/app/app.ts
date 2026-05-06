@@ -1,14 +1,20 @@
 import { Component, signal } from '@angular/core';
 import { Test1 } from './test1/test1';
 import { Test2 } from './test2/test2';
+import { Contador } from './contador/contador';
+import { Test3 } from './test3/test3';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
-  imports: [Test1, Test2],
+  imports: [Test1, Test2, Contador, Test3, FormsModule, CommonModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   standalone: true
 })
+
 export class App {
   protected readonly title = signal('cursoangular');
 
@@ -94,4 +100,23 @@ export class App {
   printData(event: any){
     console.log('CHILD COMP DATA: ', event);
   }
+
+  contador: number = 0;
+
+  sumarContador(){
+    this.contador++;
+    console.log(this.contador)
+  }
+
+  borrarContador(){
+    this.contador = 0;
+    console.log('Contador reiniciado', this.contador)
+  }
+
+  sw = true;
+
+  usuarios = ['Nicolás', 'Alonso', 'Gonzalo'];
+
+  number = 0;
+
 }

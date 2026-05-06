@@ -1,8 +1,10 @@
 import { Component, Input, Output, EventEmitter} from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-test2',
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './test2.html',
   styleUrl: './test2.scss',
 })
@@ -25,5 +27,6 @@ export class Test2 {
     console.log('event click', event);
     this.myVar = 'Hola mundo';
   }
+
 
 }
