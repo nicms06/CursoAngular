@@ -1,4 +1,4 @@
-import { Component, DoCheck, OnChanges, OnInit, SimpleChanges, Input, OnDestroy } from '@angular/core';
+import { Component, DoCheck, OnChanges, OnInit, SimpleChanges, Input, OnDestroy, contentChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
